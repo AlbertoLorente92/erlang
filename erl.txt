@@ -1,0 +1,38 @@
+Alberto Lorente Sánchez -- 11865659M
+
+1) Hay un error al construir la lista B ya que el elemento tail de la lista es 'D=9' lo cual no es una lista
+no da problema al sacar la cola de B (E) porque no le importa el tipo pero cuando pide la cabeza de E
+si da error ya que necesita que el elemento E (para hacer hd(E)) sea una lista
+
+2)E=element(2,io:read(p1)),F=element(2,io:read(p2)),G=E+F.
+
+3)lists:reverse(S)==S.
+
+4)Rev=fun(X) -> X==lists:reverse(X) end.
+
+5)Area=fun(X) -> element(3,X)*element(3,X) end.
+
+C={square,{5,2}, 20}.
+R={rectangle,{5,2},10,5}.
+Cir={circle,{5,2},3}.
+L=[Cir,R,C].
+6)element(3,element(2,lists:keysearch(square,1,L)))*element(3,element(2,lists:keysearch(square,1,L))).
+
+7){rectangle,{_,_},P,P}=R, {square,{element(1,element(2,R)),element(2,element(2,R))},P}
+
+8)
+R={rectangle,{6,6},10,6}.
+Cir={circle,{9,3},2}.
+element(1,Cir)==circle andalso element(1,R)==rectangle andalso
+element(1,element(2,Cir)) + element(3,Cir) < element(1,element(2,R)) + element(3,R) andalso 
+element(1,element(2,Cir)) - element(3,Cir) > element(1,element(2,R)) andalso 
+element(2,element(2,Cir)) + element(3,Cir) < element(2,element(2,R)) andalso 
+element(2,element(2,Cir)) - element(3,Cir) > element(2,element(2,R)) - element(4,R) .
+
+true
+
+9)Cuadrado=fun(X) -> element(1,X)==square end.
+
+10)
+
+Cs=fun(X) -> lists:map(Area,lists:filter(Cuadrado,X)) end.
